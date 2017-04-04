@@ -7,6 +7,8 @@ module RebuildPlugins
       @stream = stream
 
       banner( 'Hello from Rebuild CLI plugin' )
+      # yiedling means that plugin errored during this notification processing
+      # yield
     end
 
     private
