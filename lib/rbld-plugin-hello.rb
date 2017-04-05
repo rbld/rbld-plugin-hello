@@ -14,14 +14,14 @@ module RebuildPlugins
       RbldHelloCommand.stream = stream
 
       # yiedling means that plugin errored during this notification processing
-      # yield
+      yield if ENV['RBLD_HELLO_FAIL_START'] == '1'
     end
 
     def command(cmd_name, *args)
       banner( "Hello from Rebuild CLI plugin command '#{cmd_to_s(cmd_name, args)}' handler" )
 
       # yiedling means that plugin errored during this notification processing
-      # yield
+      yield if ENV['RBLD_HELLO_FAIL_COMMAND'] == '1'
     end
 
     private
