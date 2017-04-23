@@ -2,10 +2,6 @@ require 'colorize'
 
 module RebuildPlugins
   class RbldHelloCommand < Rebuild::CLI::Command
-    def initialize
-      @errno = 0
-    end
-
     def usage
       banner( :usage )
     end
@@ -13,8 +9,6 @@ module RebuildPlugins
     def run(parameters)
       banner( :run )
     end
-
-    attr_reader :errno
 
     class << self
       attr_accessor :stream
