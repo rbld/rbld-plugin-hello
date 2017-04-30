@@ -1,5 +1,4 @@
 require 'rubygems'
-require 'git-version-bump/rake-tasks'
 require 'rubygems/tasks'
 
 Gem::Tasks.new

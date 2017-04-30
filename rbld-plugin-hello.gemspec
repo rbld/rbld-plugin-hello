@@ -1,9 +1,10 @@
-require 'git-version-bump'
+require 'gitv'
 
 Gem::Specification.new do |s|
+  gitv = GitV.new
+
   s.name        = 'rbld-plugin-hello'
-  s.version     = GVB.version
-  s.date        = GVB.date
+  s.version     = gitv.version
   s.author      = 'Dmitry Fleytman'
   s.description = 'Sample plugin for Rebuild CLI'
   s.summary     = "rbld-plugin-hello-#{s.version}"
@@ -18,10 +19,10 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency 'travis', '~> 1.8', '>= 1.8.2'
   s.add_development_dependency 'rspec', '~> 3.5', '>= 3.5.0'
-  s.add_development_dependency 'git-version-bump', '~> 0.15', '>= 0.15.1'
+  s.add_development_dependency 'gitv', '~> 0.0', '>= 0.0.3'
   s.add_development_dependency 'rubygems-tasks', '~> 0.2', '>= 0.2.4'
   s.add_development_dependency 'rake', '~> 11.2', '>= 11.2.2'
 
-  s.files            = `git ls-files -- lib`.split("\n")
+  s.files            = `git ls-files -- lib`.split("\n") + [ gitv.cache ]
   s.require_path     = 'lib'
 end
