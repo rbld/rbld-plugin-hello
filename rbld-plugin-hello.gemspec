@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'gitv', '~> 0.0', '>= 0.0.3'
   s.add_development_dependency 'rubygems-tasks', '~> 0.2', '>= 0.2.4'
   s.add_development_dependency 'rake', '~> 11.2', '>= 11.2.2'
+  s.add_development_dependency 'license_finder', '~> 3.0', '>= 3.0.0'
 
   s.files            = `git ls-files -- lib`.split("\n") + [ gitv.cache ]
   s.require_path     = 'lib'

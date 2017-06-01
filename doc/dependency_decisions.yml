@@ -1,0 +1,38 @@
+---
+- - :whitelist
+  - MIT
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2017-06-01 11:47:06.121261248 Z
+- - :whitelist
+  - New BSD
+  - &1
+    :who: 
+    :why: 
+    :versions: []
+    :when: 2017-06-01 11:47:25.974537250 Z
+- - :whitelist
+  - Apache 2.0
+  - *1
+- - :whitelist
+  - ruby
+  - *1
+- - :whitelist
+  - ISC
+  - *1
+- - :whitelist
+  - Simplified BSD
+  - *1
+- - :whitelist
+  - GPL-2.0
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2017-06-01 11:47:35.135500404 Z
+- - :approve
+  - plugman
+  - :who: 
+    :why: 'MIT license according to the source code'
+    :versions: []
+    :when: 2017-06-01 11:47:45.124277492 Z
